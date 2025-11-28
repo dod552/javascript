@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="test4.js"></script>
+	</head>
+	<body>
+		<h1>test4.html</h1>
+		<hr>
+		<hr>
+		<script type="text/javascript">
+			/*
+			[ 4. 전달인자도 있고, 리턴값도 있는 함수 ]
+			=> 2번 함수 형태 + 3번 함수 형태
+			*/
+			console.log("동생아! 1000원 줄테니 내 과자도 사온나!");
+			
+			// 전달인자가 있으므로 함수 호출 시 소괄호() 내에 전달할 데이터 지정
+			// 리턴값도 있으므로 함수 호출이 끝난 후 리턴값을 저장할 변수 선언
+			let myHands = sister4(1000);
+			
+			console.log(`동생이 가져다 준 것 : ${myHands}`);
+			// ===============================================================
+			// [ 연습문제 ]
+			// 1. 정수 1개(x)를 전달하면 1 ~ x 까지의 합계를 계산하여 리턴하는 sum() 함수 호출
+			let x = 10;
+			let total = sum(x);
+			document.write(`1 ~ ${x} 까지의 합 = ${total}<br>`);
+			// -------------------------------------------------------
+			// 2. 정수 1개(num) 전달하면 해당 정수에 대한 절대값을 계산하여 리턴하는 abs() 함수 호출
+			// ex) num 이 2일 때는 양수이므로 그대로 2 리턴, num 이 -5 일 때는 음수이므로 양수로 변환(5)하여 리턴
+			let num = -5; 
+			let result = abs(num);
+			document.write(`${num} 값의 절대값 = ${result}<br>`);
+			document.write(`<hr>`);
+			// -------------------------------------------------------
+			// 3. 아이디(id)와 패스워드(passwd)를 전달하여 일치 여부를 판별 후 결과를 리턴하는 login() 함수 호출
+			let id = "admin";
+			let passwd = "1234";
+			document.write(`아이디 : ${id}, 패스워드 : ${passwd}<br>`);
+			document.write(`로그인 판별 결과 : ${login(id, passwd)}<br>`);
+			document.write(`<hr>`);
+			// -------------------------------------------------------
+			// 4. login2() 함수 호출하여 로그인 결과를 boolean 타입(true/false)으로 리턴받아
+			//    현재 위치에서 결과가 true 일 때 "로그인 성공!" 출력, 아니면 "로그인 실패!" 출력하기
+			// ex) login2("admin", "1234") 전달 시 로그인 성공의 의미로 true 값이 리턴되고,
+			//     login2("admin", "1111") 전달 시 로그인 실패의 의미로 false 값이 리턴
+			//     => 리턴받은 boolean 타입 값을 if문을 통해 다시 판별하여
+			//        true 일 때 "로그인 성공!" 출력, 아니면 "로그인 실패!" 출력하기
+			let loginResult = login2(id, passwd);
+			
+			// if문에 boolean 타입 값을 판별할 때 동등비교연산 등이 필요없이 바로 변수만으로 판별 가능
+			// ex) if(loginResult) {} 일 경우 loginResult == true 인 조건과 동일하며
+			//     if(!loginResult) {} 일 경우 loginResult == false 인 조건과 동일함
+			if(!loginResult) { // 실패일 때
+				document.write(`로그인 실패!<br>`);
+			} else { // 성공일 때
+				document.write(`로그인 성공!<br>`);
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
