@@ -10,7 +10,7 @@
 		<hr>
 		<hr>
 		<script type="text/javascript">
-			/*
+		/*
 			2. 전달인자는 없고, 리턴값만 있는 함수
 			[ 리턴값이 있는 함수 ]
 			- 함수 실행 후 원래 위치로 돌아갈 때 어떤 값(데이터)를 호출한 곳으로 전달하는 형태
@@ -47,16 +47,29 @@
 			// 1. getMessage() 함수 호출하여 리턴되는 문자열을 변수 msg 에 저장 후 출력(함수 내에서는 출력 금지!)
 			let msg = getMessage();
 			document.write(`msg : ${msg}<br>`);
+			document.write(`<hr>`);
 			// -------------------------------------------------------
 			// 2. getTotal() 함수 호출하여 1 ~ 10 까지의 합계 계산 결과값을 리턴받아 출력
-			
+			let total = getTotal();
+			document.write(`total : ${total}<br>`);
+			document.write(`<hr>`);
 			// -------------------------------------------------------
 			// 3. getTotal2() 함수 호출하여 1 ~ 10 까지의 합계에 대한 "짝수" or "홀수" 판별하여 결과를 리턴받아 출력
-			
-			
+			let totalResult = getTotal2();
+			document.write(`totalResult : ${totalResult}<br>`);
+			document.write(`<hr>`);
+			// -------------------------------------------------------
+			// 4. 내장함수 prompt() 활용하여 입력받은 값을 출력하기
+			// => 2번 유형의 대표적인 내장함수 활용 예제
+			//    prompt() 또는 confirm() 함수 사용 시 소괄호 내에 아무것도 기술하지 않아도 다이얼로그가 표시되며
+			//    prompt 로 입력받은 값 및 confirm 으로 클릭한 버튼값이 리턴되므로 리턴값을 변수에 저장 가능
+			let data = prompt();
+			document.write(`data : ${data}<br>`);
+			document.write(`<hr>`);
 		</script>
 	</body>
 </html>
+
 
 
 
