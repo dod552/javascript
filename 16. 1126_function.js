@@ -26,15 +26,50 @@ function sister2() {
 function getMessage() {
 	return "메세지";
 }
+// ----------------------------------------------------------------
+// 2. getTotal() 함수 호출하여 1 ~ 10 까지의 합계 계산 결과값을 리턴받아 출력
+function getTotal() {
+	let total = 0;
+	
+	for(let i = 1; i <= 10; i++) {
+		total += i;
+	}
+	
+	return total;
+}
+// ----------------------------------------------------------------
+// 3. getTotal2() 함수 호출하여 1 ~ 10 까지의 합계에 대한 "짝수" or "홀수" 판별하여 결과를 리턴받아 출력
+function getTotal2() {
+	let total = 0;
+	
+	for(let i = 1; i <= 10; i++) {
+		total += i;
+	}
+	
+	// 삼항연산자(?:) 사용하여 홀수 또는 짝수 판별하여 리턴
+//	return (total % 2 == 0) ? `${total} = 짝수` : `${total} = 홀수`;
 
+	// if 문 활용
+	// 1) 각 블록 내에서 직접 return 문을 통해 "홀수", "짝수" 리턴하는 방법
+//	if(total % 2 == 0) {
+//		return `${total} = 짝수22`;
+//	} else {
+//		// 조건관계없이 공통으로 수행할 문장들..
+//		return `${total} = 홀수22`;
+//	}
 
-
-
-
-
-
-
-
+	// 2) 각 블록 내에서는 리턴할 값만 변수에 저장하고 if문 종료 후 하나의 return 문으로 결과를 리턴하는 방법
+	let totalResult; // 리턴값을 저장할 변수
+	
+	if(total % 2 == 0) {
+		totalResult = `${total} = 짝수22`; // 리턴값을 저장하는 변수에 결과값 저장
+	} else {
+		totalResult = `${total} = 홀수22`; // 리턴값을 저장하는 변수에 결과값 저장
+	}
+	
+	// if 문 결과에 따른 서로 다른 값이 저장되어 있는 totalResult 값을 리턴
+	return totalResult;
+}
 
 
 
